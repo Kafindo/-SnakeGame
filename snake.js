@@ -122,7 +122,22 @@ function didGameEnd() {
   const hitToptWall = snake[0].y < 0;
   const hitBottomWall = snake[0].y > gameCanvas.height - 10;
   return hitLeftWall || hitRightWall || hitToptWall || hitBottomWall
-}
+} 
+function randomTen(min, max) {
+    return Math.round((Math.random() * (max-min) + min) / 10) * 10;
+  }
+ 
+  function createFood() {
+    
+    foodX = randomTen(0, gameCanvas.width - 10);
+   
+    foodY = randomTen(0, gameCanvas.height - 10);
+    
+    snake.forEach(function isFoodOnSnake(part) {
+      const foodIsoNsnake = part.x == foodX && part.y == foodY;
+      if (foodIsoNsnake) createFood();
+    });
+  }
 
 
 function drawSnake() {
