@@ -9,5 +9,27 @@
 <body>
     <canvas id="gameCanvas" width="300" height="300"></canvas>
     <script src="snake.js"></script>
+    <style>
+            body {
+              background: black;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+                }
+            canvas {
+              border: 1px solid white;
+            }
+            #gameCanvas {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+                }
+          #score {
+              text-align: center;
+              font-size: 140px;
+              font-family: 'Antic Slab', serif;
+            }
+         </style>
 </body>
 </html>
