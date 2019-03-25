@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "SnakeGame",
+    "description": "build Snake using only JavaScript, HTML & CSS",
+    "version": "1",
+    "author": "Heritier kafindo",
+
+    "browser_action":{
+        "default_icon":"",
+        "default_title":""
+        },
+
+    "chrome_url_overrides":{
+        "newtab": "snake.html"
+    },
+    "permissions":["activeTab"]
+}
