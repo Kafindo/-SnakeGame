@@ -5,7 +5,7 @@
      "version": "1",
      "author": "Heritier kafindo",
     "browser_action": {
-       "default_icon": "-icon.png",
+       "default_icon": "snake-icon.png",
        "default_title": "Enjoy the game"
      },
     "chrome_url_overrides" : {
