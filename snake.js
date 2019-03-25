@@ -65,6 +65,34 @@ function drawFood() {
   ctx.fillRect(foodX, foodY, 10, 10);
   ctx.strokeRect(foodX, foodY, 10, 10);
 }
+function advanceSnake() {
+ 
+    const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+    
+    snake.unshift(head);
+    const didEatFood = snake[0].x === foodX && snake[0].y === foodY;
+    if (didEatFood) {
+      
+      score += 10;
+      
+      document.getElementById('score').innerHTML = score;
+      
+      createFood();
+    } else {
+    
+      snake.pop();
+    }
+  }
+
+advanceSnake()
+
+dx = 0;
+
+dy = -10;
+
+advanceSnake();
+
+drawSnake();
 
 function advanceSnake() {
  
